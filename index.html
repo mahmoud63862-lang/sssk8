@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="الموقع الشخصي لمحمود أبو شنب — مبرمج حاسوب مهتم ببايثون وتطوير الويب.">
+<title>Mahmoud Abu Shanab | Portfolio</title>
+<style>
+:root{--bg:#06101d;--panel:rgba(13,29,49,.78);--panel2:#10233a;--text:#edf8ff;--muted:#a8bfd2;--blue:#38bdf8;--cyan:#67e8f9;--line:rgba(103,232,249,.22);--shadow:0 18px 55px rgba(0,0,0,.28)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;color:var(--text);background:radial-gradient(ellipse at 15% 5%,rgba(14,165,233,.22),transparent 35%),radial-gradient(ellipse at 85% 30%,rgba(8,145,178,.17),transparent 32%),var(--bg);line-height:1.8;overflow-x:hidden}
+body.light{--bg:#edf8ff;--panel:rgba(255,255,255,.83);--panel2:#fff;--text:#09233a;--muted:#4c6578;--line:rgba(2,132,199,.23);--shadow:0 18px 50px rgba(2,55,85,.12);background:radial-gradient(ellipse at 15% 5%,rgba(56,189,248,.25),transparent 35%),#edf8ff}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.3;background:repeating-linear-gradient(120deg,transparent 0 75px,rgba(103,232,249,.04) 76px 77px);z-index:-1}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(4,13,25,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+body.light .topbar{background:rgba(240,250,255,.86)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:900;letter-spacing:.4px;color:var(--cyan);font-size:1.1rem}
+.navlinks{display:flex;gap:15px;align-items:center;flex-wrap:wrap}
+.navlinks a{font-size:.9rem;color:var(--muted)}
+.navlinks a:hover{color:var(--cyan)}
+.controls{display:flex;gap:8px}
+.smallbtn,.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:9px 13px;border-radius:13px;cursor:pointer;font:inherit;transition:.25s}
+.smallbtn:hover,.btn:hover{transform:translateY(-2px);border-color:var(--cyan);box-shadow:0 8px 24px rgba(56,189,248,.13)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:40px;padding:76px 0 58px;min-height:550px}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:6px 12px;border:1px solid var(--line);border-radius:99px;color:var(--cyan);background:var(--panel);font-size:.9rem}
+.hero h1{font-size:clamp(2.2rem,5vw,4.6rem);line-height:1.2;margin:20px 0 14px;font-weight:950}
+.english-name{display:block;font-family:Georgia,serif;font-style:italic;letter-spacing:1px;font-size:clamp(1.4rem,3.5vw,2.5rem);color:var(--cyan);text-shadow:0 0 24px rgba(56,189,248,.28);direction:ltr;text-align:right}
+.hero p{color:var(--muted);font-size:1.08rem;max-width:680px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn.primary{background:linear-gradient(135deg,#0284c7,#06b6d4);border:0;color:white;font-weight:800}
+.portrait-wrap{position:relative;display:grid;place-items:center}
+.halo{position:absolute;width:min(310px,75vw);aspect-ratio:1;border-radius:50%;background:conic-gradient(from 20deg,transparent,#22d3ee,#0284c7,transparent);filter:blur(2px);animation:spin 12s linear infinite;opacity:.7}
+.portrait{position:relative;width:min(285px,70vw);aspect-ratio:1;object-fit:cover;border-radius:50%;border:5px solid rgba(103,232,249,.6);box-shadow:0 0 55px rgba(14,165,233,.25);background:var(--panel2)}
+.portrait-fallback{position:relative;width:min(285px,70vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-size:5rem;font-weight:900;color:var(--cyan);background:var(--panel);border:2px solid var(--line);box-shadow:var(--shadow)}
+@keyframes spin{to{transform:rotate(360deg)}}
+section{padding:48px 0}
+.section-head{margin-bottom:24px}
+.section-head small{color:var(--cyan);font-weight:800;letter-spacing:2px}
+.section-head h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:3px 0}
+.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);backdrop-filter:blur(12px);transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:rgba(103,232,249,.55)}
+.icon{font-size:1.7rem}
+.card h3{margin:8px 0}
+.card p,.muted{color:var(--muted)}
+.taglist{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+.tag{border:1px solid var(--line);color:var(--cyan);padding:4px 10px;border-radius:99px;font-size:.82rem}
+.skill{margin:16px 0}
+.skill-label{display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem}
+.bar{height:9px;border-radius:99px;background:var(--panel2);overflow:hidden;margin-top:7px;border:1px solid var(--line)}
+.bar span{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,#0284c7,#67e8f9);border-radius:99px}
+.project-link{display:inline-block;margin-top:12px;color:var(--cyan);font-weight:800}
+.certificate{width:100%;height:185px;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:var(--panel2)}
+.placeholder{height:185px;border-radius:14px;border:1px dashed var(--line);display:grid;place-items:center;text-align:center;color:var(--muted);padding:15px}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}
+.contact-item{padding:12px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.contact-item strong{color:var(--text);display:block}
+.contact-form{display:grid;gap:12px}
+.contact-form input,.contact-form textarea{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font:inherit;outline:none}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--cyan)}
+.contact-form textarea{min-height:120px;resize:vertical}
+.quote{font-size:1.3rem;font-weight:800;color:var(--cyan)}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);text-align:center}
+.to-top{position:fixed;bottom:18px;left:18px;z-index:8;border-radius:50%;width:45px;height:45px;background:#0284c7;color:white;border:0;font-size:1.2rem;cursor:pointer;box-shadow:var(--shadow)}
+@media(max-width:850px){.hero{grid-template-columns:1fr;text-align:center;padding-top:48px;gap:30px}.hero p{margin-inline:auto}.actions,.eyebrow{justify-content:center}.english-name{text-align:center}.portrait-wrap{grid-row:1}.grid{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}.nav{padding:12px 0;flex-wrap:wrap}.navlinks{order:3;width:100%;justify-content:center;gap:12px}.navlinks a{font-size:.82rem}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.hero h1{font-size:2.2rem}.card{padding:18px}.navlinks{gap:9px}.navlinks a{font-size:.76rem}.controls{margin-inline-start:auto}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="container nav">
+<a class="brand" href="#home">MAHMOUD.DEV</a>
+<nav class="navlinks" aria-label="التنقل">
+<a href="#about" data-ar="من أنا" data-en="About">من أنا</a>
+<a href="#skills" data-ar="مهاراتي" data-en="Skills">مهاراتي</a>
+<a href="#projects" data-ar="مشاريعي" data-en="Projects">مشاريعي</a>
+<a href="#certificates" data-ar="الشهادات" data-en="Certificates">الشهادات</a>
+<a href="#journey" data-ar="رحلتي" data-en="Journey">رحلتي</a>
+<a href="#contact" data-ar="تواصل معي" data-en="Contact">تواصل معي</a>
+</nav>
+<div class="controls"><button class="smallbtn" id="langBtn" type="button">EN</button><button class="smallbtn" id="themeBtn" type="button" aria-label="تغيير المظهر">☀️</button></div>
+</div></header>
+<main><div class="container">
+<section class="hero" id="home">
+<div>
+<span class="eyebrow"><span>●</span><span data-ar="مبرمج حاسوب | أتعلم وأتطور باستمرار" data-en="Computer Programmer | Always Learning">مبرمج حاسوب | أتعلم وأتطور باستمرار</span></span>
+<h1 data-ar="أبني أفكاري سطرًا بعد سطر" data-en="Building ideas, one line at a time">أبني أفكاري سطرًا بعد سطر</h1>
+<span class="english-name">𝑴𝒂𝒉𝒎𝒐𝒖𝒅 𝑨𝒃𝒖 𝑺𝒉𝒂𝒏𝒂𝒃</span>
+<p data-ar="أهلاً بك في مساحتي الرقمية. أنا محمود، مهتم ببرمجة الحاسوب وتطوير الويب، وأحب لغة Python وصناعة مشاريع تجمع بين البساطة والفكرة الذكية. هذه رحلتي في التعلم والتجربة وبناء المستقبل." data-en="Welcome to my digital space. I'm Mahmoud, interested in computer programming and web development. I enjoy Python and building projects that combine simple design with smart ideas. This is my journey of learning, experimenting, and building the future.">أهلاً بك في مساحتي الرقمية. أنا محمود، مهتم ببرمجة الحاسوب وتطوير الويب، وأحب لغة Python وصناعة مشاريع تجمع بين البساطة والفكرة الذكية. هذه رحلتي في التعلم والتجربة وبناء المستقبل.</p>
+<div class="actions">
+<a class="btn primary" href="#projects" data-ar="استكشف مشاريعي ←" data-en="Explore my projects →">استكشف مشاريعي ←</a>
+<a class="btn" href="#contact" data-ar="تواصل معي" data-en="Contact me">تواصل معي</a>
+<a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+</div>
+</div>
+<div class="portrait-wrap"><div class="halo"></div><img class="portrait" src="profile.jpg" alt="صورة محمود أبو شنب" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="portrait-fallback" style="display:none">MA</div></div>
+</section>
+</div>
+</main>
+</body>
+</html>
